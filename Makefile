@@ -1,4 +1,4 @@
-%.bin: %.bdf Dockerfile convert.py
+%.bin8: %.bdf Dockerfile convert.py
 	docker build -t bdf-to-verilog .
 	docker run -i --rm bdf-to-verilog < $< > $@
 

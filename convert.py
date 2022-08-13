@@ -7,10 +7,10 @@ print(
    '\n'.join(
       f'// {code}:\n' +
       '\n'.join(
-          line.rstrip()for line in
+          line[::-1] for line in
             str(font.glyph(bytes([code]).decode('cp437')))
-            .replace('.','0 ')
-            .replace('#','1 ')
+            .replace('.','0')
+            .replace('#','1')
             .split('\n')
         )
       for code in range(256))
