@@ -1,6 +1,7 @@
 #!/usr/bin/python3
+import sys
 from bdfparser import Font
-font = Font('ib8x8u.bdf')
+font = Font(sys.stdin)
 
 print(
    '\n'.join(
